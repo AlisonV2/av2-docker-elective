@@ -10,3 +10,10 @@
 
 ## Step 2: API Dockerfile
 
+- Created Dockerfile and .dockerignore
+- Created docker-compose.yml
+- MongoDB & Server compose setup
+
+## Step3: Build Client
+
+
