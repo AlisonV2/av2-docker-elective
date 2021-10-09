@@ -30,6 +30,16 @@ services:
     tty: true
     depends_on: 
       - server
+  nginx:
+    depends_on:
+      - server
+      - client
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports:
+      - "3007:80"
 
 volumes: 
   data:
