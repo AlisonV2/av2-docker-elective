@@ -65,5 +65,5 @@ App will be running on localhost:3007
 
 ## Problems I've ran into
 
-- ENV variables not loading, even with dotenv or env_files
+- ENV variables not loading, even with dotenv or env_file
 - Mongo wouldn't connect unless the app folder is somewhere in C:/User
