@@ -20,6 +20,16 @@ services:
       MONGODB_PASSWORD: secret
     depends_on:
       - mongodb
+  client:
+    build: ./client
+    ports: 
+      - '3000:3000'
+    volumes: 
+      - ./client/src:/app/src
+    stdin_open: true
+    tty: true
+    depends_on: 
+      - server
 
 volumes: 
   data:
