@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  mongodb:
+    image: 'mongo'
+    volumes: 
+      - data:/data/db
+    environment: 
+      MONGO_INITDB_ROOT_USERNAME: av2
+      MONGO_INITDB_ROOT_PASSWORD: secret
+  server:
+    build: ./server
+    ports:
+      - '80:80'
+    volumes: 
+      - logs:/app/logs
+      - ./server:/app
+      - /app/node_modules
+    environment: 
+      MONGODB_USERNAME: av2
+      MONGODB_PASSWORD: secret
+    depends_on:
+      - mongodb
+
+volumes: 
+  data:
+  logs:
