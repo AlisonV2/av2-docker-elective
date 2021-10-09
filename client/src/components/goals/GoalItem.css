@@ -1,0 +1,18 @@
+.goal-item {
+  margin: 1rem auto;
+  padding: 1rem;
+  border: 1px solid #49BFC7;
+  color: #1d1d1d;
+  background-color: #49BFC7;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.goal-input-label {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}

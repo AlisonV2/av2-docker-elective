@@ -1,0 +1,12 @@
+#goals-container {
+  text-align: center;
+}
+
+#goals-container h2 {
+  color: #414040;
+  margin-bottom: 0.5rem;
+}
+
+#goals-container small {
+  margin-bottom: 1rem;
+}
