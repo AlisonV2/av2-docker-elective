@@ -57,7 +57,6 @@ docker run -it -p 3001:3000 server
 
 ## Run the app
 
-In the server folder : 
 - Copy .env.sample content into .env
 
 Then run : 
