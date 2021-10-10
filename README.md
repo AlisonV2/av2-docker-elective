@@ -55,6 +55,9 @@ docker run -it -p 3001:3000 server
 
 - Added nginx to docker-compose
 
+### Step 6: Move environment variables to .env
+
+- Replaced hardcoded env variables in docker-compose and server/app.js with unique .env file
 ## Run the app
 
 - Copy .env.sample content into .env
