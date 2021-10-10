@@ -96,7 +96,7 @@ mongoose.connect(
       console.error(err);
     } else {
       console.log('Now, Mongo and you can be great friends!');
-      app.listen(80);
+      app.listen(process.env.NODE_PORT ||80);
     }
   }
 );

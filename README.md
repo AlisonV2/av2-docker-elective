@@ -69,4 +69,5 @@ App will be running on localhost:3007
 
 ## Problems I've ran into
 
+- Dotenv files wouldn't load 
 - Mongo wouldn't connect unless the app folder is somewhere in C:/User

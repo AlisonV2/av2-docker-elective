@@ -10,12 +10,12 @@ services:
     environment: 
       MONGO_INITDB_ROOT_USERNAME: '${MONGO_INITDB_ROOT_USERNAME}'
       MONGO_INITDB_ROOT_PASSWORD: '${MONGO_INITDB_ROOT_PASSWORD}'
+    ports: 
+      - '27017:27017'
     networks: 
       - server
   server:
     build: ./server
-    ports:
-      - '80:80'
     volumes: 
       - logs:/app/logs
       - ./server:/app
@@ -28,6 +28,9 @@ services:
       MONGODB_HOST: '${MONGODB_HOST}'
       MONGODB_NAME: '${MONGODB_NAME}'
       MONGODB_PORT: '${MONGODB_PORT}'
+      NODE_PORT: ${NODE_PORT}
+    ports:
+      - '${SERVER_PORT}:${NODE_PORT}'
     depends_on:
       - mongodb
     networks: 
@@ -35,9 +38,10 @@ services:
   client:
     build: ./client
     ports: 
-      - '3000:3000'
+      - '${CLIENT_PORT}:${REACT_PORT}'
     volumes: 
       - ./client/src:/app/src
+      - /app/node_modules
     stdin_open: true
     tty: true
     depends_on: 
@@ -49,11 +53,14 @@ services:
       - server
       - client
     restart: always
+    
     build:
       dockerfile: Dockerfile
       context: ./nginx
+    env_file: 
+      - ./.env
     ports:
-      - "3007:80"
+      - '${APP_PORT}:${NODE_PORT}'
     networks: 
       - server
       - client
