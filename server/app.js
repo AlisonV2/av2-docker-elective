@@ -1,3 +1,4 @@
+require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
 
@@ -6,6 +7,7 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 
 const Goal = require('./models/goal');
+const dbConfig = require('./config/db');
 
 const app = express();
 
@@ -83,7 +85,7 @@ app.delete('/goals/:id', async (req, res) => {
 });
 
 mongoose.connect(
-  'mongodb://av2:secret@mongodb:27017/admin?authSource=admin',
+  dbConfig.url,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
