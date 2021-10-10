@@ -73,6 +73,16 @@ App will be running on localhost:3007
 - Mongo wouldn't connect unless the app folder is somewhere in C:/User
 - Problems using env variables in Nginx conf file
 
+## How I've fixed them
+
+### Dotenv loading failure
+
+Problem fixed after system and volume prune
+
+### MongoDB connection
+
+Problem fixed after moving the app folder into C:/User/
+
 ### Nginx ENV variables
 
 - Multistep build to use ENV variables defined in docker compose?
