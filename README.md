@@ -69,7 +69,12 @@ docker run -it -p 3001:3000 server
 - Copied .env.sample content to .env.
 - Ran docker-compose up --build 
 
-Test successful :) 
+Test successful :)
+
+### Step 8: Finetuning
+
+- Changed node and mongo images to a fixed one
+- Tried fixing linux permissions problem -- So far, no luck
 ## Run the app
 
 - Copy .env.sample content into .env
@@ -87,6 +92,7 @@ App will be running on localhost:3007
 - Dotenv files wouldn't load 
 - Mongo wouldn't connect unless the app folder is somewhere in C:/User
 - Problems using env variables in Nginx conf file
+- When trying to change the logs volume to add node access, "No such file or directory" error
 
 ## How I've fixed them
 
@@ -101,3 +107,10 @@ Problem fixed after moving the app folder into C:/User/
 ### Nginx ENV variables
 
 - Multistep build to use ENV variables defined in docker compose?
+
+I decided not to change this one, as I did want a reverse proxy for the api call advantages it gives me. 
+
+### Linux permissions
+
+Still working on it. 
+The solution that worked on linux doesn't work so far on windows or macOS. 
