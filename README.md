@@ -113,4 +113,4 @@ I decided not to change this one, as I did want a reverse proxy for the api call
 ### Linux permissions
 
 Still working on it. 
-The solution that worked on linux doesn't work so far on windows or macOS. 
+The solution that worked on linux didn't work so far on windows or macOS. 
