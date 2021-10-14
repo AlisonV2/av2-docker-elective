@@ -62,6 +62,14 @@ docker run -it -p 3001:3000 server
 ### Step 6: Move environment variables to .env
 
 - Replaced hardcoded env variables in docker-compose and server/app.js with unique .env file
+
+### Step 7: Test on MacOS
+
+- Cloned the repository
+- Copied .env.sample content to .env.
+- Ran docker-compose up --build 
+
+Test successful :) 
 ## Run the app
 
 - Copy .env.sample content into .env

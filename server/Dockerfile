@@ -2,6 +2,9 @@ FROM node:14
 
 WORKDIR /app
 
+#Here you could set the volume and set the correct user on it
+# VOLUME /app/logs
+# RUN chown -R node:node /app/logs
 COPY package.json .
 
 RUN npm install

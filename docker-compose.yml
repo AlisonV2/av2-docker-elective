@@ -17,7 +17,7 @@ services:
   server:
     build: ./server
     volumes: 
-      - logs:/app/logs
+      - logs:/app/logs #Carefull this volume will set the /app/logs to the root user 
       - ./server:/app
       - /app/node_modules
     env_file: 
