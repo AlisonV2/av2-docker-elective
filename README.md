@@ -1,5 +1,9 @@
 # Alison Vandromme - Ynov M1 Docker Elective
 
+## Architecture
+
+<img src="archi.jpg" />
+
 ## Stack 
 
 <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" /> <img src="https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white" /> <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" /> <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" /> <img src="https://img.shields.io/badge/MongoDB-white?style=for-the-badge&logo=mongodb&logoColor=4EA94B" /> <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" /> <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" /> <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" /> <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" />
@@ -28,7 +32,7 @@ docker run -it -p 3002:80 server
 ```
 
 - Created docker-compose.yml with MongoDB & Server images
-- Change mongoDB url: HOST = name of the mongo service
+- Change mongoDB url: HOST = {name-of-the-mongo-service}
 
 ### Step 3: Build Client
 
@@ -85,7 +89,7 @@ Then run :
 docker-compose up --build
 ```
 
-App will be running on localhost:3007
+<bold>App will be running on localhost:3007</bold>
 
 ## Problems I've ran into
 
