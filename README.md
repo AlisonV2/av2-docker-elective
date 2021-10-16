@@ -96,7 +96,7 @@ docker-compose up --build
 - Dotenv files wouldn't load 
 - Mongo wouldn't connect unless the app folder is somewhere in C:/User
 - Problems using env variables in Nginx conf file
-- When trying to change the logs volume to add node access, "No such file or directory" error
+- fs.write permission problems on Linux systems (?)
 
 ## How I've fixed them
 
@@ -116,5 +116,4 @@ I decided not to change this one, as I did want a reverse proxy for the api call
 
 ### Linux permissions
 
-Still working on it. 
-The solution that worked on linux didn't work so far on windows or macOS. 
+I wasn't able to reproduce the error on the Linux VM I tested the app on. 
